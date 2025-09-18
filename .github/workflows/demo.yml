@@ -10,3 +10,5 @@ jobs:
      - uses: actions/checkout@v4
      - name: Run add
        run: echo 3+5= $((3+5))
+     - name: Run subtraction
+       run: echo 10-5= $((10-5))
