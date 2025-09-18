@@ -1,0 +1,16 @@
+name: Demo-CI
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  sheethal:
+    runs-on: ubuntu-latest
+    steps:
+     - uses: actions/checkout@v4
+     - name: Add operations 
+       run: 
+          a=5
+          b=7
+          sum=$((a + b))
+          echo "The sum is $sum"
