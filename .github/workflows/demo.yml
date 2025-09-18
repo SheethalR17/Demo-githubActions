@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - uses: actions/checkout@v4
-     - name: Run hello world
-       run: echo Hello, World!
+     - name: Run add
+       run: echo 3+5= $((3+5))
