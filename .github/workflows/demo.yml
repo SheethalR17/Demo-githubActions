@@ -1,14 +1,17 @@
-name: Demo-CI
+name: Commit message workflow
 on:
   push:
-    branches: ["main"]
+    branches:
+     - main
 
 jobs:
-  sheethal:
+  deploy:
+    if: contains(github.event.head_commit.message, '[deploy]')
     runs-on: ubuntu-latest
+
     steps:
-     - uses: actions/checkout@v4
-     - name: Run add
-       run: echo 3+5= $((3+5))
-     - name: Run subtraction
-       run: echo 10-5= $((10-5))
+      - name: Checkout code 
+        uses: actions/checkout@v3
+
+      - name: Run this script
+        run: echo "Deploy this Application"
