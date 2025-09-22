@@ -1,17 +1,17 @@
-name: Commit message workflow
+name: Environment-variables
 on:
   push:
     branches:
      - main
-
+env:
+  Day_of_week: Monday
 jobs:
-  deploy:
-    if: contains(github.event.head_commit.message, '[deploy]')
+  demo:
     runs-on: ubuntu-latest
-
+    env:
+      Greeting: Hello
     steps:
-      - name: Checkout code 
-        uses: actions/checkout@v3
-
-      - name: Run this script
-        run: echo "Deploy this Application"
+      - name: Environment declaration
+        run: echo "$Greeting $First_name. Today is $Day_of_week"
+        env:
+          First_name: Sheethal
