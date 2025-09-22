@@ -1,8 +1,7 @@
-name: Environment-variables
+name: Environment-variables-sheethal
 on:
-  push:
-    branches:
-     - main
+  workflow_dispatch:
+  
 env:
   Day_of_week: Monday
 jobs:
