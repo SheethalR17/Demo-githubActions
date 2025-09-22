@@ -1,4 +1,4 @@
-name: Environment-variables-sheethal
+name: Environment-variable
 on:
   workflow_dispatch:
   
